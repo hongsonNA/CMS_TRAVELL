@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index(){
         
         $allNews = TravelNews::all();
-        dd($allNews->toArray());
+        // dd($allNews->toArray());
         return view('index');
     } 
 }

@@ -23,7 +23,7 @@ Route::get('/', 'Homecontroller@index')->name('index');
 Route::group(['prefix' => 'news'], 
     function() {
         Route::get('/', 'News\\NewsController@listNews')->name('listNews');
-        Route::post('add', 'News\\NewsController@addNews')->name('addNews');
+        Route::get('add', 'News\\NewsController@addNews')->name('addNews');
     
 });
 
