@@ -18,6 +18,7 @@ class TravelNews extends Model
         'content',
         'user_id',
         'status',
+        'push_date',
         'created_at',
     ];
 
