@@ -6,10 +6,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
-use App\User;
+use App\Model\User;
 class AuthController extends Controller
 {
-    
+
+
+    public function listUser(){
+        $userAll = User::all();
+        return json_encode($userAll);   
+    }
+    // reponse list User
     /**
      * Create user
      *
@@ -47,6 +53,7 @@ class AuthController extends Controller
      * @return [string] token_type
      * @return [string] expires_at
      */
+   
     public function login(Request $request)
     {
         $request->validate([
